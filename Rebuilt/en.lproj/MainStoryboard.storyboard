@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ywC-Bk-wBt">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="Dk0-5B-Ket">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bz-Lt-cVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="L1K-Ys-yws" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="LLV-qH-Bff"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="lWH-zZ-aeg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HEQ-Oq-9wU" kind="relationship" relationship="rootViewController" id="ZYj-QM-XmN"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="510" y="-397"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="axc-Al-AJ4">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lmZ-XI-mRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="pEw-5J-4rJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4jB-ew-jbG">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1584" y="-1065"/>
+        </scene>
+        <!--Map List View Controller-->
+        <scene sceneID="ndK-Mt-dvT">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2x5-8z-BRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="HEQ-Oq-9wU" customClass="RBMapListViewController" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="bLV-q3-z53">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </mapView>
+                    <navigationItem key="navigationItem" id="zBN-b3-efW">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="sHn-8a-kkK">
+                            <rect key="frame" x="96" y="7" width="128" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="All"/>
+                                <segment title="Tracked"/>
+                            </segments>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QbX-od-4WI">
+                            <connections>
+                                <segue destination="pEw-5J-4rJ" kind="modal" id="15N-I8-gdw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="bLV-q3-z53" id="PVY-6y-d7M"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1045" y="-397"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="gnR-iC-nkW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HhK-eW-YaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="Vkl-4w-78K" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YZK-Sd-A2M">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hh5-SL-82c">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="VPM-pS-qlr">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Bad-V5-3fZ">
+                            <rect key="frame" x="96" y="7" width="128" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="All"/>
+                                <segment title="Tracked"/>
+                            </segments>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Gz0-8e-9iB">
+                            <connections>
+                                <segue destination="pEw-5J-4rJ" kind="modal" id="Y7p-LO-Rv6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1045" y="306"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="AqF-YI-TJU">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0T-5Q-BRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="q44-1M-SUV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="4N9-i7-aZa"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="E2u-Nr-hhF">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Vkl-4w-78K" kind="relationship" relationship="rootViewController" id="lho-9c-Ppd"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="511" y="306"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wYr-7e-Yie">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cq2-CN-dZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController definesPresentationContext="YES" id="ywC-Bk-wBt" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="La6-1i-qSG">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="L1K-Ys-yws" kind="relationship" relationship="viewControllers" id="UEn-fA-TpI"/>
+                        <segue destination="q44-1M-SUV" kind="relationship" relationship="viewControllers" id="a6M-6x-qtM"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-24" y="-64"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="RBMapListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RBMapListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Y7p-LO-Rv6"/>
+    </inferredMetricsTieBreakers>
+</document>
